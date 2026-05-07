@@ -1,0 +1,8 @@
+CREATE TABLE "Rss" (
+	"Id"	INTEGER NOT NULL,
+	"Name"	TEXT NOT NULL,
+	"Url"	TEXT NOT NULL,
+	"Description"	TEXT,
+	"Label"	TEXT NOT NULL,
+	PRIMARY KEY("Id" AUTOINCREMENT)
+);

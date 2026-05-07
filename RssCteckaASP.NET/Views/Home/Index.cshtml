@@ -1,0 +1,18 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+    List<AddFeed> feed = ViewBag.data;
+}
+<a asp-action="addFeed" class="btn btn-primary">
+    Přidat nový zdroj
+</a>
+
+
+@if (feed.Count == 0)
+{
+        <p color ="blue">Prazdne nohy!</p>
+}
+<br>
+@foreach (var i in feed)
+{
+   <a class="form-label" asp-action="content" asp-route-url = "@i.URL" >@i.Nazev</a><br>
+}

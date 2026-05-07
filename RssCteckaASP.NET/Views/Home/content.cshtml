@@ -1,0 +1,18 @@
+﻿@{
+	Rss x = ViewBag.d;
+}
+
+@if (x == null)
+{
+	<h1>TadyNic!</h1>
+}
+else
+{
+	@foreach (var i in x.channel.item)
+	{
+		<h1>@i.title</h1>
+		<p>@i.description</p>
+		<p>@i.pubDate</p>
+		<br>
+	}
+}

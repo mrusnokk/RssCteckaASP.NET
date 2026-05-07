@@ -1,0 +1,30 @@
+﻿@model AddFeed;
+@{
+
+}
+<h1>TOTO JE FEED</h1>
+<form asp-action="addFeed" method="post">
+
+    <label class="form-label" asp-for="Nazev">Nazev</label>
+    <input asp-for="Nazev" class="form-control"/>
+    <span asp-validation-for="Nazev" class="bg-danger"></span>
+
+    <label class="form-label" asp-for="URL">Url</label>
+    <input asp-for="URL" class="form-control" />
+    <span asp-validation-for="URL" class="bg-danger"></span>
+
+    <label class="form-label" asp-for="popis">Popis</label>
+    <textarea asp-for="popis" class="form-control" rows="4"></textarea>
+    <span asp-validation-for="popis" class="bg-danger"></span>
+
+    <label class="form-label" asp-for="Stitek">Stitek</label>
+    <select asp-for="Stitek" class="form-select">
+        <option value="zpravy" >Zprávy</option>
+        <option value="technologie a veda" >Technologie a veda</option>
+        <option value = "volny cas">Volny cas</option>
+    </select>
+    <span asp-validation-for="Stitek" class="bg-danger"></span>
+
+
+    <button action="submit" class="btn btn-primary">Odeslat</button>
+</form>
